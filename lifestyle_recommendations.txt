@@ -1,0 +1,10 @@
+def lifestyle_recommendations(prediction, bmi, glucose):
+    if prediction == 1:  # Predicted as diabetes
+        recommendations = ["Consult a healthcare provider."]
+        if bmi > 25:
+            recommendations.append("Engage in regular physical activity to reduce BMI.")
+        if glucose > 140:
+            recommendations.append("Adopt a low-sugar diet to manage glucose levels.")
+    else:
+        recommendations = ["Maintain a balanced diet and regular exercise."]
+    return recommendations
